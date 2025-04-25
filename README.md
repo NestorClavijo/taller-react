@@ -1,3 +1,7 @@
+# Integrantes del proyecto 
+- Nestor Javier Clavijo Hernández
+- Jesus David Ramirez Celis 
+
 # Panel Administrativo con React, Vite y Tailwind CSS
 
 Este proyecto es un panel administrativo moderno desarrollado con React, Vite y Tailwind CSS. Incluye una barra de navegación lateral (sidebar), una barra superior (navbar) y varias páginas de ejemplo como Dashboard, Clientes, Proveedores y Usuarios.
