@@ -368,7 +368,7 @@ function Header() {
     </header>
   )
 }
-
+```
 
 ## Componentes Principales
 
