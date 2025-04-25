@@ -1,6 +1,6 @@
-
 import { Link, useLocation } from "react-router-dom"
 import { X, Users, Briefcase, User, LogOut, Home } from "lucide-react"
+import logoImage from "../assets/logo.png"
 
 export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const location = useLocation()
@@ -40,7 +40,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
           <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
             <div className="flex-shrink-0 flex items-center px-4">
-              <span className="text-xl font-bold text-purple-600">yourlogo</span>
+              <img src={logoImage || "/placeholder.svg"} alt="Logo" className="h-10 w-auto" />
             </div>
             <nav className="mt-5 px-2 space-y-1">
               {navigation.map((item) => (
@@ -80,7 +80,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           <div className="flex-1 flex flex-col min-h-0 bg-white border-r border-gray-200">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
-                <img src="./../assets/logo.png" alt="Logo" className="h-10 w-auto" />
+                <img src={logoImage || "/placeholder.svg"} alt="Logo" className="h-10 w-auto" />
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
                 {navigation.map((item) => (

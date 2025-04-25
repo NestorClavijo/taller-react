@@ -2,7 +2,7 @@
 
 Este proyecto es un panel administrativo moderno desarrollado con React, Vite y Tailwind CSS. Incluye una barra de navegación lateral (sidebar), una barra superior (navbar) y varias páginas de ejemplo como Dashboard, Clientes, Proveedores y Usuarios.
 
-![Vista previa del panel administrativo](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BmV2oEg0kTkOl29NiizeT6ZcY54W3o.png)
+![Vista previa del panel administrativo](captura.png)
 
 ## Tabla de Contenidos
 
@@ -12,6 +12,7 @@ Este proyecto es un panel administrativo moderno desarrollado con React, Vite y 
 - [Configuración de Tailwind CSS](#configuración-de-tailwind-css)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Implementación del Navbar y Sidebar](#implementación-del-navbar-y-sidebar)
+- [Manejo de imágenes en Vite](#manejo-de-imagenes-en-vite)
 - [Componentes Principales](#componentes-principales)
 - [Ejecución del Proyecto](#ejecución-del-proyecto)
 - [Solución de Problemas Comunes](#solución-de-problemas-comunes)
@@ -177,7 +178,8 @@ El Sidebar es un componente clave que proporciona la navegación principal de la
 ```javascript 
 // src/components/Sidebar.jsx
 import { Link, useLocation } from "react-router-dom"
-import { X, Users, Briefcase, User, LogOut, Home } from 'lucide-react'
+import { X, Users, Briefcase, User, LogOut, Home } from "lucide-react"
+import logoImage from "../assets/logo.png"
 
 export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const location = useLocation()
@@ -217,7 +219,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
           <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
             <div className="flex-shrink-0 flex items-center px-4">
-              <span className="text-xl font-bold text-purple-600">yourlogo</span>
+              <img src={logoImage || "/placeholder.svg"} alt="Logo" className="h-10 w-auto" />
             </div>
             <nav className="mt-5 px-2 space-y-1">
               {navigation.map((item) => (
@@ -257,7 +259,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           <div className="flex-1 flex flex-col min-h-0 bg-white border-r border-gray-200">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
-                <span className="text-xl font-bold text-purple-600">yourlogo</span>
+                <img src={logoImage || "/placeholder.svg"} alt="Logo" className="h-10 w-auto" />
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
                 {navigation.map((item) => (
@@ -350,6 +352,23 @@ export default function Navbar({ sidebarOpen, setSidebarOpen }) {
   )
 }
 ```
+## Manejo de imágenes en Vite
+
+### Importación de imágenes
+
+En Vite, puedes importar imágenes directamente en tus componentes:
+
+```jsx
+import logoImage from './assets/logo.png'
+
+function Header() {
+  return (
+    <header>
+      <img src={logoImage || "/placeholder.svg"} alt="Logo" />
+    </header>
+  )
+}
+
 
 ## Componentes Principales
 
