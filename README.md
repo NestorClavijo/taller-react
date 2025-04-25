@@ -39,7 +39,7 @@ yarn create vite admin-panel --template react
 pnpm create vite admin-panel --template react
 ```
 
-### 2. Instalación de Dependencias 
+## Instalación de Dependencias 
 
 #### 1. Instalar dependencias principales
 
@@ -69,7 +69,7 @@ yarn add -D tailwindcss postcss autoprefixer
 pnpm add -D tailwindcss postcss autoprefixer
 ```
 
-### 3. Configuración de Tailwind CSS
+## Configuración de Tailwind CSS
 
 #### 1. Inicializar Tailwind CSS
 
@@ -136,3 +136,31 @@ Edita el archivo `src/index.css` y añade las directivas de Tailwind:
 @tailwind components;
 @tailwind utilities;
 ```
+
+## Estructura del Proyecto
+
+Organiza tu proyecto con la siguiente estructura de archivos:
+
+admin-panel/ ├── public/ ├── src/ │ ├── components/ │ │ ├── Navbar.jsx │ │ └── Sidebar.jsx │ ├── pages/ │ │ ├── Dashboard.jsx │ │ ├── Clientes.jsx │ │ ├── Proveedores.jsx │ │ └── Usuarios.jsx │ ├── App.jsx │ ├── main.jsx │ ├── index.css ├── index.html ├── package.json ├── tailwind.config.js ├── postcss.config.js ├── vite.config.js
+
+admin-panel/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   └── Sidebar.jsx
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Clientes.jsx
+│   │   ├── Proveedores.jsx
+│   │   └── Usuarios.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── vite.config.js
+
+## Implementación del Navbar y Sidebar
